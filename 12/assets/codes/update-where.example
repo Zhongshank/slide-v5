@@ -1,2 +1,0 @@
-UPDATE users SET email = 'test@t.com' WHERE
-email = 'wow@x.com';

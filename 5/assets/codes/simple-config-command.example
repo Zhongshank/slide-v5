@@ -1,3 +1,0 @@
-# directly call webpack, setup config path
-# default using `webpack.config.js`
-webpack --config webpack.config.dev.js

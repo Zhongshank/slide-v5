@@ -1,9 +1,0 @@
-const aFunctionShouldCallMyCallback = (cb) => {
-  cb();
-};
-
-it('callback should be called', () => {
-  const callback = jest.fn();
-  aFunctionShouldCallMyCallback(callback);
-  expect(callback).toBeCalled();
-});

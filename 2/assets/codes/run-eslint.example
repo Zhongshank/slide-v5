@@ -1,3 +1,0 @@
-npm run lint
-# 等同於執行下面這行
-# ./node_modules/.bin/eslint .

@@ -1,3 +1,0 @@
-<div className={'foo' + i} />
-<Counter count={101} />
-<MyButton disabled={false} onClick={() => {}} />

@@ -1,3 +1,0 @@
-import { createStore } from 'redux'; // redux 的 API 終於出現了, 冏...
-import todoReducer from '../reducers/todos';
-const store = createStore(todoReducer);

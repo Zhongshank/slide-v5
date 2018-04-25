@@ -1,1 +1,0 @@
-const Hello = ({ text }) => <div>{'Hello ' + text }</div>

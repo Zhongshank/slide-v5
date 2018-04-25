@@ -1,7 +1,0 @@
-componentWillReceiveProps(newProps) {
-  // invoked before re-rendering
-
-  // cannot use setState()
-
-  // we rarely use this method
-}

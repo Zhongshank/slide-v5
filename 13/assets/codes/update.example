@@ -1,2 +1,0 @@
-knex('books').update('title', 'Slaughterhouse Five')
-// update `books` set `title` = 'Slaughterhouse Five'

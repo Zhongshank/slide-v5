@@ -1,2 +1,0 @@
-document.addEventListener('click', item.show);
-// undefined

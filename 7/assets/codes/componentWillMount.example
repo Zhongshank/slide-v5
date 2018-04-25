@@ -1,5 +1,0 @@
-componentWillMount() {
-  // invoked only once
-
-  // can use setState(), the render function will get the state
-}

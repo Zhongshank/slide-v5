@@ -1,2 +1,0 @@
-knex.withSchema('public').select('*').from('users')
-// select * from `public`.`users`

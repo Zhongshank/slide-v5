@@ -1,9 +1,0 @@
-/*
-<div id="top" align="center">
-  <div id="nested"></div>
-</div>
-*/
-
-var topElement = document.getElementById('top');
-var nestedElement = document.getElementById('nested');
-var throwawayNode = topElement.removeChild(nestedElement);

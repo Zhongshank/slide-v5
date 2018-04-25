@@ -1,5 +1,0 @@
-// superMath.js
-const math = require('math');
-exports.incrementOne = function (num) {
-  return math.add(num, 1);
-};
