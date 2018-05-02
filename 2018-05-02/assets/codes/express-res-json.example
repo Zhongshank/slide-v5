@@ -3,8 +3,8 @@ const app = express();
 
 app.use('/', function (req, res) {
   const user = {
-    name: 'cph',
-    age: 23,
+    name: 'ric',
+    age: 18,
   };
   res.json(user);
 });

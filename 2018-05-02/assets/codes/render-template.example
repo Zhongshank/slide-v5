@@ -9,4 +9,4 @@ const render = function (str, data) {
 }
 
 const tpl = 'Hello <%=username%>.';
-console.log(render(tpl, { username: 'cph' }));
+console.log(render(tpl, { username: 'ric' }));

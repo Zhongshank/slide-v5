@@ -42,6 +42,9 @@ const images = {
   comptable: require('../assets/comp-table.png'), // eslint-disable-line global-require
   socket: require('../assets/socket.png'), // eslint-disable-line global-require
   babelIs: require('../assets/babel-is.png'), // eslint-disable-line global-require
+  browsers: require('../assets/browsers.png'), // eslint-disable-line global-require
+  babelAst: require('../assets/babel-ast.jpg'), // eslint-disable-line global-require
+  babelAst2: require('../assets/babel-ast2.png'), // eslint-disable-line global-require
   middleware: require('../assets/middleware.png'), // eslint-disable-line global-require
   githubTrending: require('../assets/github-trending.png'), // eslint-disable-line global-require
   sleepingCat: require('../assets/sleeping-cat.jpg'), // eslint-disable-line global-require
@@ -334,6 +337,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Arrow function
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/arrow-function.example')}
@@ -345,6 +349,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Class
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/class-1.example')}
@@ -362,6 +367,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Destructuring
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/destructuring.example')}
@@ -373,6 +379,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Default Parameter
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/default.example')}
@@ -384,6 +391,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Array Rest
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/rest.example')}
@@ -395,6 +403,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Array Spread
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/spread.example')}
@@ -407,6 +416,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Const
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/const.example')}
@@ -419,6 +429,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Let
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/let.example')}
@@ -431,6 +442,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Import, Export
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/import-export.example')}
@@ -449,13 +461,13 @@ export default class Presentation extends React.Component {
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
+            <Heading size={4} lineHeight={2} textColor="white">
               有了這些語法..但是..
             </Heading>
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
+            <Heading size={4} lineHeight={2} textColor="white">
               瀏覽器不一定支援
             </Heading>
           </BgSlide>
@@ -491,13 +503,20 @@ export default class Presentation extends React.Component {
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
+            <Image
+              src={images.browsers.replace('/', '')}
+              style={{ width: '90%' }}
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
               等到所有 browser 支援<br /> 是不實際的
             </Heading>
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
+            <Heading size={4} lineHeight={2} textColor="white">
               還有這種做法
             </Heading>
             <Text
@@ -514,13 +533,13 @@ export default class Presentation extends React.Component {
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
+            <Heading size={4} lineHeight={2} textColor="white">
               必須編譯 JavaScript<br /> 還有其他理由
             </Heading>
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
+            <Heading size={4} lineHeight={2} textColor="white">
               在網路上傳輸：size 很重要
             </Heading>
             <List>
@@ -552,6 +571,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Dead Code Elimination
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/dead-code-1.example')}
@@ -599,10 +619,54 @@ export default class Presentation extends React.Component {
           </BgSlide>
 
           <BgSlide transition={['slide']}>
+            <Link href="https://babeljs.io/repl/" target="_blank">
+              <Image
+                src={images.babelExample.replace('/', '')}
+                style={{ width: '100%' }}
+              />
+            </Link>
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              AST <br />(abstract syntax tree，抽象語法樹)
+            </Heading>
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              <Link href="https://astexplorer.net/" target="_blank">
+                AST Explorer
+              </Link>
+            </Text>
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
             <Image
-              src={images.babelExample.replace('/', '')}
+              src={images.babelAst2.replace('/', '')}
               style={{ width: '100%' }}
             />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Image
+              src={images.babelAst.replace('/', '')}
+              style={{ width: '100%' }}
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Babel 原理
+            </Heading>
+            <List>
+              <ListItem>parser (code -> ast)</ListItem>
+              <ListItem>transformer (ast -> ast')</ListItem>
+              <ListItem>generator (ast' -> code')</ListItem>
+            </List>
           </BgSlide>
 
           <BgSlide transition={['slide']}>
@@ -610,44 +674,97 @@ export default class Presentation extends React.Component {
               簡單的 setup 步驟
             </Heading>
             <List>
-              <ListItem>
-                安裝 babel-cli, babel-preset-react, babel-preset-env,
-                babel-plugin-transform-object-rest-spread
-              </ListItem>
+              <ListItem>安裝 babel-cli, babel-preset-env</ListItem>
               <ListItem>寫 .babelrc，列出 presets 和 plugins</ListItem>
               <ListItem>寫對應的 compile npm scripts</ListItem>
             </List>
           </BgSlide>
 
           <BgSlide transition={['slide']}>
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              安裝 babel-cli, babel-preset-env
+            </Text>
+            <br />
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/install-babel.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              寫 .babelrc，列出 presets 和 plugins
+            </Text>
+            <br />
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/babelrc.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              寫對應的 compile npm scripts
+            </Text>
+            <br />
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/npm-babel.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
             <Heading size={3} lineHeight={2} textColor="white">
               實際操作
-            </Heading>
-            <Link
-              href="https://github.com/web-seminar/slide-v3/tree/gh-pages/4/demo/babel-setup"
-              target="_blank"
-            >
-              範例
-            </Link>
-          </BgSlide>
-
-          <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
-              One more thing..
-            </Heading>
-          </BgSlide>
-
-          <BgSlide transition={['slide']}>
-            <Heading size={3} lineHeight={2} textColor="white">
-              Object Rest Spread!
             </Heading>
           </BgSlide>
 
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              A stage 3 proposal in<br />
+              babel-preset-env
+            </Heading>
+            <List>
+              <ListItem>preset 就是一組 config</ListItem>
+              <ListItem>支援 ES2015, 2016, 2017 的編譯</ListItem>
+              <ListItem>可以用參數指定支援瀏覽器或 Node 的程度</ListItem>
+            </List>
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              其他還有兩個很重要的語法..
+            </Heading>
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Object Rest Spread <br />
               <Link href="https://github.com/tc39/ecma262" target="_blank">
-                tc39/ecma262
+                (ecma262 stage 4)
               </Link>
             </Heading>
           </BgSlide>
@@ -656,6 +773,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Object Rest
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/object-rest.example')}
@@ -668,6 +786,7 @@ export default class Presentation extends React.Component {
             <Heading size={4} lineHeight={1} textColor="white">
               Object Spread
             </Heading>
+            <br />
             <CodePane
               lang="js"
               source={require('raw!../assets/codes/object-spread.example')}
@@ -677,12 +796,104 @@ export default class Presentation extends React.Component {
           </BgSlide>
 
           <BgSlide transition={['slide']}>
-            <Heading size={4} lineHeight={1} textColor="white">
-              Class Property
-            </Heading>
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              安裝{' '}
+              <Link
+                href="https://babeljs.io/docs/plugins/transform-object-rest-spread/"
+                target="_blank"
+              >
+                babel-plugin-transform-object-rest-spread
+              </Link>
+            </Text>
+            <br />
             <CodePane
               lang="js"
-              source={require('raw!../assets/codes/object-rest.example')}
+              source={require('raw!../assets/codes/install-object-rest-spread.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              加到 plugins
+            </Text>
+            <br />
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/plugin-object-rest-spread.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={1} textColor="white">
+              Class Property <br />
+              <Link href="https://github.com/tc39/ecma262" target="_blank">
+                (ecma262 stage 3)
+              </Link>
+            </Heading>
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={1} textColor="white">
+              Class Properties
+            </Heading>
+            <br />
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/class-properties.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              安裝{' '}
+              <Link
+                href="https://babeljs.io/docs/plugins/transform-class-properties/"
+                target="_blank"
+              >
+                babel-plugin-transform-class-properties
+              </Link>
+            </Text>
+            <br />
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/install-class-properties.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+            <Text
+              textSize="1.5em"
+              lineHeight={1.3}
+              margin="60px 0px 0px"
+              bold
+              textColor="white"
+            >
+              加到 plugins
+            </Text>
+            <br />
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/plugin-class-properties.example')}
               margin="0 20px 0"
               textSize="0.6em"
             />
@@ -690,8 +901,40 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              chentsulin 部分結束
+              該使用 v6 還是 v7-beta?
             </Heading>
+            <List>
+              <ListItem>都可以</ListItem>
+              <ListItem>v6 很穩定，v7-beta 也經過約 9-10 個月</ListItem>
+            </List>
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Babel 主要使用方式
+            </Heading>
+            <List>
+              <ListItem>babel-cli</ListItem>
+              <ListItem>
+                babel-loader (Webpack, Create React App, Next.js)
+              </ListItem>
+            </List>
+          </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Babel 參考資料
+            </Heading>
+            <List>
+              <ListItem>
+                <Link
+                  href="https://github.com/jamiebuilds/babel-handbook"
+                  target="_blank"
+                >
+                  babel-handbook{' '}
+                </Link>
+              </ListItem>
+            </List>
           </BgSlide>
         </Deck>
       </Spectacle>
