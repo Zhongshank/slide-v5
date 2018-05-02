@@ -279,6 +279,17 @@ export default class Presentation extends React.Component {
             />
           </BgSlide>
           <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              REST practice
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-rest-practice.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={1} textColor="white">
               Render view
             </Heading>
