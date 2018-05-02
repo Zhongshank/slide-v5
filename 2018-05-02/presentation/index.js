@@ -42,6 +42,9 @@ const images = {
   comptable: require('../assets/comp-table.png'), // eslint-disable-line global-require
   socket: require('../assets/socket.png'), // eslint-disable-line global-require
   babelIs: require('../assets/babel-is.png'), // eslint-disable-line global-require
+  middleware: require('../assets/middleware.png'), // eslint-disable-line global-require
+  githubTrending: require('../assets/github-trending.png'), // eslint-disable-line global-require
+  sleepingCat: require('../assets/sleeping-cat.jpg'), // eslint-disable-line global-require
 };
 
 preloader(images);
@@ -75,7 +78,7 @@ export default class Presentation extends React.Component {
               Web Programming
             </Heading>
             <Heading size={5} fix textColor="white">
-              2018-04-25
+              2018-05-02
             </Heading>
             <Text
               textSize="1.5em"
@@ -102,21 +105,222 @@ export default class Presentation extends React.Component {
           {/* =================================
             kpman 部分
             ================================= */}
+          {/* =================================
+            Express.js
+            ================================= */}
+
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Express.js
+            </Heading>
+            <List>
+              <ListItem>web framework for Node.js</ListItem>
+              <ListItem>npm install express --save</ListItem>
+              <ListItem>npm install express-generator -g</ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={6} lineHeight={1} textColor="white">
+              GitHub Trending
+            </Heading>
+            <Image src={images.githubTrending.replace('/', '')} />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Express.js 101
+            </Heading>
+            <List>
+              <ListItem>middleware</ListItem>
+              <ListItem>routing</ListItem>
+              <ListItem>request (query, params, body)</ListItem>
+              <ListItem>response (send, json)</ListItem>
+              <ListItem>render view</ListItem>
+            </List>
+          </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              kpman 部分
+              Simple express.js server
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-init.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-middleware.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware
+            </Heading>
+            <Image
+              src={images.middleware.replace('/', '')}
+              style={{ width: '80%' }}
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Middleware 針對 path
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-middleware-path.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              Routing
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-routing.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              express.Router
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-router.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              解析 Request
+            </Heading>
+            <List>
+              <ListItem>req.params</ListItem>
+              <ListItem>req.query</ListItem>
+              <ListItem>req.body</ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              req.params (1/3)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-req-params.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              req.query (2/3)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-req-query.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              req.body (3/3)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-req-body.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              回傳 Response
+            </Heading>
+            <List>
+              <ListItem>res.send</ListItem>
+              <ListItem>res.json</ListItem>
+            </List>
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              res.send(1/2)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-res-send.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={2} textColor="white">
+              res.json(2/2)
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-res-json.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={4} lineHeight={1} textColor="white">
+              Render view
+            </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/express-render-view.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
+          </BgSlide>
+          <BgSlide transition={['slide']}>
+            <Heading size={3} lineHeight={2} textColor="white">
+              Server side render
             </Heading>
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              Express
+              其實就是字串解析
             </Heading>
+            <List>
+              <ListItem>讀取 template</ListItem>
+              <ListItem>語法分解（正規表達式）</ListItem>
+              <ListItem>產生待執行語句</ListItem>
+              <ListItem>與資料一起執行，產生字串</ListItem>
+            </List>
           </BgSlide>
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              kpman 部分結束
+              render template
             </Heading>
+            <CodePane
+              lang="js"
+              source={require('raw!../assets/codes/render-template.example')}
+              margin="0 20px 0"
+              textSize="0.6em"
+            />
           </BgSlide>
+
+          <BgSlide transition={['slide']}>
+            <Heading size={6} lineHeight={1} textColor="white">
+              中場休息
+            </Heading>
+            <Image src={images.sleepingCat.replace('/', '')} />
+          </BgSlide>
+
           {/* =================================
             chentsulin 部分
             ================================= */}
