@@ -7,4 +7,4 @@ const addTodo = (todoText) => ({
   }
 })
 
-store.dispatch(addTodo('Hellow World!'))
+store.dispatch(addTodo('Hello World!'))

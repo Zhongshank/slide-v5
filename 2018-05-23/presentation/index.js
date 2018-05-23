@@ -427,7 +427,7 @@ export default class Presentation extends React.Component {
               Principles
             </Heading>
             <List>
-              <ListItem>Single Source of True</ListItem>
+              <ListItem>Single Source of Truth</ListItem>
               <ListItem>Read-Only State</ListItem>
               <ListItem>Pure-Function State Change</ListItem>
             </List>
@@ -464,7 +464,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <br />
             <Text textColor="primary" lineHeight={2}>
-              store 根據 action 如何變化，<br />必須寫成一個 Rure
+              store 根據 action 如何變化，<br />必須寫成一個 Pure
               Function，也就是 reducer
             </Text>
           </BgSlide>
@@ -688,7 +688,7 @@ export default class Presentation extends React.Component {
             <Text textColor="primary" lineHeight={1.8}>
               回傳一個{' '}
               <a href="https://facebook.github.io/react/docs/higher-order-components.html">
-                High-Order Component
+                Higher-Order Component
               </a>{' '}
               (傳進去一個 Component，回傳一個修飾過的 Component)
             </Text>

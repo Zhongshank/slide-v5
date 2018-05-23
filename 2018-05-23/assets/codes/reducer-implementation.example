@@ -7,7 +7,7 @@ const todosReducer = (state = initState, action) => {
       const newTodo = {
         text: action.payload.text,
       };
-      return [...state, action.payload]
+      return [...state, newTodo]
     default:
       return state; // 沒有做任何事也要回傳原本的
   }
