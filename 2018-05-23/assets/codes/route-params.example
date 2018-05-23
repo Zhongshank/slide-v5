@@ -1,4 +1,4 @@
-const User = ({ match }) => <div>{match.params.user}</div>
+const User = ({ match }) => <div>User: {match.params.user}</div>
 
 const App = (
   <BrowserRouter>

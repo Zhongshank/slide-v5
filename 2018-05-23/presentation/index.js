@@ -250,7 +250,7 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              Route & Link
+              Route & Link (exact 就必須 path 完全一樣)
             </Heading>
             <CodePane
               lang="js"
@@ -262,7 +262,7 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              Switch
+              Switch (只會 Match 第一個)
             </Heading>
             <CodePane
               lang="js"
@@ -274,7 +274,7 @@ export default class Presentation extends React.Component {
 
           <BgSlide transition={['slide']}>
             <Heading size={4} lineHeight={2} textColor="white">
-              404 Page Not Found (Match All)
+              404 Page Not Found (不給 path Match All)
             </Heading>
             <CodePane
               lang="js"
@@ -314,7 +314,28 @@ export default class Presentation extends React.Component {
             </Heading>
             <List style={{ listStylePosition: 'inherit' }}>
               <ListItem>
-                <Text textColor="primary">NavLink</Text>
+                <Link
+                  href="https://reacttraining.com/react-router/web/api/NavLink"
+                  target="_blank"
+                >
+                  <Text textColor="primary">NavLink</Text>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  href="https://reacttraining.com/react-router/web/guides/scroll-restoration"
+                  target="_blank"
+                >
+                  <Text textColor="primary">Scroll Restoration</Text>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  href="https://reacttraining.com/react-router/web/guides/redux-integration"
+                  target="_blank"
+                >
+                  <Text textColor="primary">Redux Integration</Text>
+                </Link>
               </ListItem>
             </List>
           </BgSlide>
